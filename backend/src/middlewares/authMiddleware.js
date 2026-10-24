@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const { castObject } = require('../../../ai-engine/models/User')
+const { castObject } = require('../models/User')
 const JWT_SECRET = process.env.JWT_SECRET || 'SALON_SECRET_CODE'
 
 const verifyToken = (req, res, next) => {

@@ -22,6 +22,7 @@ document.getElementById('registerForm').addEventListener('submit', async(e) => {
             message.style.color = 'green'
             message.textContent = 'Registered successfully'
             localStorage.setItem('token', data.token)
+            window.location.href = '/dashboard'
         }else{
             message.style.color = 'red'
             message.textContent = data.message || 'Registered failed'

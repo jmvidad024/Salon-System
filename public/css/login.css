@@ -82,3 +82,20 @@
       font-size: 14px;
       color: #dc2626;
     }
+
+.register-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.register-link a {
+    color: #4f46e5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

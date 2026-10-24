@@ -1,4 +1,5 @@
 const authService = require('../services/authService')
+const User = require('../models/User')
 
 const register = async(req, res) => {
     try{
@@ -33,7 +34,28 @@ const login = async(req, res) => {
     }
 }
 
+const getCurrentUser = async(req, res) => {
+    try{
+        const user = await User.findById(req.user.id).select('-password')
+
+        if(!user){
+            return res.status(404).json({
+                'message': 'User not found!'
+            })
+        }
+        res.json({
+            email: user.email,
+            role: user.role
+        })
+    }catch(error){
+        res.status(500).json({
+            'message': "Server error" + error.message
+        })
+    }
+}
+
 module.exports = {
     register,
-    login
+    login,
+    getCurrentUser
 }

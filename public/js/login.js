@@ -14,11 +14,11 @@ document.getElementById('loginForm').addEventListener('submit', async(e) => {
             body: JSON.stringify({email, password})
         })
         const data = await response.json()
-        console.log(data)
         if(response.ok){
             message.style.color = 'green'
             message.textContent = 'Login successful'
             localStorage.setItem('token', data.token)
+            window.location.href = '/dashboard'
         }else{
             message.style.color = 'red'
             message.textContent = data.error || 'Login failed'

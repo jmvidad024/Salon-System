@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salon System - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to your Dashboard</h1>
+        <p id="userRoleText">Loading your workspace...</p>
+
+        <!-- ADMIN VIEW (Hidden by default) -->
+        <div id="adminView" style="display: none; background: #f4f4f4; padding: 20px; margin-top: 20px;">
+            <h2>👑 Admin Control Panel</h2>
+            <p>View payments, revenue, salon settings, and staff management.</p>
+            <ul>
+                <li>Total Revenue: $1,240.00</li>
+                <li>Manage Stylists</li>
+            </ul>
+        </div>
+
+        <!-- STYLIST VIEW (Hidden by default) -->
+        <div id="stylistView" style="display: none; background: #eef9ff; padding: 20px; margin-top: 20px;">
+            <h2>✂️ Stylist Schedule</h2>
+            <p>View your upcoming appointments, client names, and hair service notes.</p>
+            <ul>
+                <li>Client: Jane Doe — Service: Haircut & Coloring (10:00 AM)</li>
+                <li>Client: John Smith — Service: Fade Trim (11:30 AM)</li>
+            </ul>
+        </div>
+
+        <br>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
